@@ -1,0 +1,459 @@
+============= BUILDING STARTED ============
+  Project: Model3
+===========================================
+Compiling .c files...
+   [delete] Deleting: C:\CirrusDSP\clide\workspace\Model3\output\standalone\src\main.O
+   [delete] Deleting: C:\CirrusDSP\clide\workspace\Model3\output\standalone\src\main.s
+   [delete] Deleting: C:\CirrusDSP\clide\workspace\Model3\output\standalone\src\multitap_echo.O
+   [delete] Deleting: C:\CirrusDSP\clide\workspace\Model3\output\standalone\src\multitap_echo.s
+   [delete] Deleting: C:\CirrusDSP\clide\workspace\Model3\output\standalone\src\processing.O
+   [delete] Deleting: C:\CirrusDSP\clide\workspace\Model3\output\standalone\src\processing.s
+C:/CirrusDSP/clide/workspace/Model3/src/main.c
+C:/CirrusDSP/bin/ccc2 C:/CirrusDSP/clide/workspace/Model3/src/main.c
+ -S
+ -ruf
+ -fcse
+ -fprc
+ -fcompact
+ -funsafe-loop-optimizations
+ -g
+ -edi
+ -emit-hints
+ -ira
+ -fconst-pool=X
+ -fno0init
+ -femit-asm-struct
+ -cdl
+ -D_TOOLS_VERSION_=0x0701
+ -D_SLOT_=0
+ -D_OVLY_=standalone
+ -D_OVLY_REVISION_=020000
+ -D_VERSION_=00
+ -D_DSP_=a
+ -D_COMMON_INC_PATH_=C:/CirrusDSP/crystal32/common/inc/
+ -D_TARGET_FAMILY_=crystal32
+ -D_MUI_VERSION_=020000
+ -IC:/CirrusDSP/include/
+ -IC:/CirrusDSP/include/dsplib/
+ -IC:/CirrusDSP/clide/workspace/Model3/inc/
+ -oC:/CirrusDSP/clide/workspace/Model3/output/standalone/src/main.s
+ -D_LOCAL_SRC_PATH_=src/
+ -D_LOCAL_INC_PATH_=inc/
+ -D_ROUTER_INC_PATH_=rom_inc/
+     [exec] "C:/CirrusDSP/include/stdio.h", line 8: warning #1108: #warning directive: Functionality of stdio.h header file is not fully supported
+     [exec]   #warning Functionality of stdio.h header file is not fully supported
+     [exec]    ^
+     [exec] 
+     [exec] "C:/CirrusDSP/include/string.h", line 8: warning #1108: #warning directive: Functionality of string.h header file is not fully supported
+     [exec]   #warning Functionality of string.h header file is not fully supported
+     [exec]    ^
+     [exec] 
+     [exec] "C:/CirrusDSP/include/string.h", line 13: warning #303: typedef name has already been declared (with same type)
+     [exec]   typedef unsigned int size_t;
+     [exec]                        ^
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/main.c", line 51: warning #1229: argument of type "__memX WAVREAD_HANDLE *" is incompatible with parameter (1 of cl_wavread_getnchannels) of type "WAVREAD_HANDLE *"
+     [exec]   	nChannels = cl_wavread_getnchannels(wav_in);
+     [exec]   	                                    ^
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/main.c", line 52: warning #1229: argument of type "__memX WAVREAD_HANDLE *" is incompatible with parameter (1 of cl_wavread_bits_per_sample) of type "WAVREAD_HANDLE *"
+     [exec]       bitsPerSample = cl_wavread_bits_per_sample(wav_in);
+     [exec]                                                  ^
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/main.c", line 53: warning #1229: argument of type "__memX WAVREAD_HANDLE *" is incompatible with parameter (1 of cl_wavread_frame_rate) of type "WAVREAD_HANDLE *"
+     [exec]       sampleRate = cl_wavread_frame_rate(wav_in);
+     [exec]                                          ^
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/main.c", line 54: warning #1229: argument of type "__memX WAVREAD_HANDLE *" is incompatible with parameter (1 of cl_wavread_number_of_frames) of type "WAVREAD_HANDLE *"
+     [exec]       iNumSamples =  cl_wavread_number_of_frames(wav_in);
+     [exec]                                                  ^
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/main.c", line 83: warning #1229: argument of type "__memX WAVREAD_HANDLE *" is incompatible with parameter (1 of cl_wavread_recvsample) of type "WAVREAD_HANDLE *"
+     [exec]   					sample = cl_wavread_recvsample(wav_in);
+     [exec]   					                               ^
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/main.c", line 96: warning #1229: argument of type "__memX WAVWRITE_HANDLE *" is incompatible with parameter (1 of cl_wavwrite_sendsample) of type "WAVWRITE_HANDLE *"
+     [exec]   					cl_wavwrite_sendsample(wav_out, sample);
+     [exec]   					                       ^
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/main.c", line 104: warning #1229: argument of type "__memX WAVREAD_HANDLE *" is incompatible with parameter (1 of cl_wavread_close) of type "WAVREAD_HANDLE *"
+     [exec]       cl_wavread_close(wav_in);
+     [exec]                        ^
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/main.c", line 105: warning #1229: argument of type "__memX WAVWRITE_HANDLE *" is incompatible with parameter (1 of cl_wavwrite_close) of type "WAVWRITE_HANDLE *"
+     [exec]       cl_wavwrite_close(wav_out);
+     [exec]                         ^
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/main.c", line 19: warning #553: variable "nChannels" was set but never used
+     [exec]       int nChannels;
+     [exec]           ^
+     [exec] 
+     [exec] WARNING: '-unsafe-loop-optimization' is ignored when '-g' option is used!
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/main.c", line 10: warning #4007: Pointer to unspecified memory zone.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/main.c", line 77: info: Hardware loop is not emitted due to: 
+     [exec] Upper bound and initial loop index value are not constant.
+     [exec] Make them constant or try using -funsafe-loop-optimizations option.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/main.c", line 31: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/main.c", line 34: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/main.c", line 77: info: Call to runtime function __div. Look at the separate document for information how to avoid this call.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/main.c", line 84: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/main.c", line 95: info: SRS is used at this line.
+     [exec] 
+     [exec] FRONT END TIME: 0 seconds
+     [exec] BACK  END TIME: 0 seconds
+     [exec] 
+C:/CirrusDSP/clide/workspace/Model3/src/multitap_echo.c
+C:/CirrusDSP/bin/ccc2 C:/CirrusDSP/clide/workspace/Model3/src/multitap_echo.c
+ -S
+ -ruf
+ -fcse
+ -fprc
+ -fcompact
+ -funsafe-loop-optimizations
+ -g
+ -edi
+ -emit-hints
+ -ira
+ -fconst-pool=X
+ -fno0init
+ -femit-asm-struct
+ -cdl
+ -D_TOOLS_VERSION_=0x0701
+ -D_SLOT_=0
+ -D_OVLY_=standalone
+ -D_OVLY_REVISION_=020000
+ -D_VERSION_=00
+ -D_DSP_=a
+ -D_COMMON_INC_PATH_=C:/CirrusDSP/crystal32/common/inc/
+ -D_TARGET_FAMILY_=crystal32
+ -D_MUI_VERSION_=020000
+ -IC:/CirrusDSP/include/
+ -IC:/CirrusDSP/include/dsplib/
+ -IC:/CirrusDSP/clide/workspace/Model3/inc/
+ -oC:/CirrusDSP/clide/workspace/Model3/output/standalone/src/multitap_echo.s
+ -D_LOCAL_SRC_PATH_=src/
+ -D_LOCAL_INC_PATH_=inc/
+ -D_ROUTER_INC_PATH_=rom_inc/
+     [exec] WARNING: '-unsafe-loop-optimization' is ignored when '-g' option is used!
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/multitap_echo.c", line 26: warning #4007: Pointer to unspecified memory zone.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/multitap_echo.c", line 26: warning #4007: Pointer to unspecified memory zone.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/multitap_echo.c", line 66: warning #4007: Pointer to unspecified memory zone.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/multitap_echo.c", line 83: info: This array indexing or structure field access is not compiled to utilize AGU. Compiler might optimize it better if you code it using pointers.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/multitap_echo.c", line 83: info: This array indexing or structure field access is not compiled to utilize AGU. Compiler might optimize it better if you code it using pointers.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/multitap_echo.c", line 94: info: This array indexing or structure field access is not compiled to utilize AGU. Compiler might optimize it better if you code it using pointers.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/multitap_echo.c", line 94: info: This array indexing or structure field access is not compiled to utilize AGU. Compiler might optimize it better if you code it using pointers.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/multitap_echo.c", line 77: info: Hardware loop is not emitted due to: 
+     [exec] Upper bound and initial loop index value are not constant.
+     [exec] Make them constant or try using -funsafe-loop-optimizations option.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/multitap_echo.c", line 88: info: Hardware loop is not emitted due to: 
+     [exec] Upper bound and initial loop index value are not constant.
+     [exec] Make them constant or try using -funsafe-loop-optimizations option.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/multitap_echo.c", line 74: info: Hardware loop is not emitted due to: 
+     [exec] Upper bound and initial loop index value are not constant.
+     [exec] Make them constant or try using -funsafe-loop-optimizations option.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/multitap_echo.c", line 30: info: Hardware loop is not emitted due to: 
+     [exec] Upper bound and initial loop index value are not constant.
+     [exec] Make them constant or try using -funsafe-loop-optimizations option.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/multitap_echo.c", line 83: info: Call to runtime function __mod. Look at the separate document for information how to avoid this call.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/multitap_echo.c", line 94: info: Call to runtime function __mod. Look at the separate document for information how to avoid this call.
+     [exec] 
+     [exec] FRONT END TIME: 0 seconds
+     [exec] BACK  END TIME: 0 seconds
+     [exec] 
+C:/CirrusDSP/clide/workspace/Model3/src/processing.c
+C:/CirrusDSP/bin/ccc2 C:/CirrusDSP/clide/workspace/Model3/src/processing.c
+ -S
+ -ruf
+ -fcse
+ -fprc
+ -fcompact
+ -funsafe-loop-optimizations
+ -g
+ -edi
+ -emit-hints
+ -ira
+ -fconst-pool=X
+ -fno0init
+ -femit-asm-struct
+ -cdl
+ -D_TOOLS_VERSION_=0x0701
+ -D_SLOT_=0
+ -D_OVLY_=standalone
+ -D_OVLY_REVISION_=020000
+ -D_VERSION_=00
+ -D_DSP_=a
+ -D_COMMON_INC_PATH_=C:/CirrusDSP/crystal32/common/inc/
+ -D_TARGET_FAMILY_=crystal32
+ -D_MUI_VERSION_=020000
+ -IC:/CirrusDSP/include/
+ -IC:/CirrusDSP/include/dsplib/
+ -IC:/CirrusDSP/clide/workspace/Model3/inc/
+ -oC:/CirrusDSP/clide/workspace/Model3/output/standalone/src/processing.s
+ -D_LOCAL_SRC_PATH_=src/
+ -D_LOCAL_INC_PATH_=inc/
+ -D_ROUTER_INC_PATH_=rom_inc/
+     [exec] "C:/CirrusDSP/include/math.h", line 8: warning #1108: #warning directive: Functionality of math.h header file is not supported
+     [exec]   #warning Functionality of math.h header file is not supported
+     [exec]    ^
+     [exec] 
+     [exec] WARNING: '-unsafe-loop-optimization' is ignored when '-g' option is used!
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 73: warning #4007: Pointer to unspecified memory zone.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 45: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 37: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 116: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 116: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 117: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 118: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 119: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 120: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 157: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 157: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 158: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 159: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 160: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 161: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 162: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 192: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 192: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 193: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 194: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 195: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 196: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 200: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 201: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 233: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 234: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 237: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 238: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 287: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 287: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 288: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 289: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 290: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 291: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 292: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 298: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 299: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 322: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 323: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 326: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 327: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 370: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 370: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 371: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 372: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 373: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 374: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 375: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 380: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 381: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 403: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 404: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 407: info: SRS is used at this line.
+     [exec] 
+     [exec] "C:/CirrusDSP/clide/workspace/Model3/src/processing.c", line 408: info: SRS is used at this line.
+     [exec] 
+     [exec] FRONT END TIME: 0 seconds
+     [exec] BACK  END TIME: 7 seconds
+     [exec] 
+Assembling .a and .s files...
+C:/CirrusDSP/clide/workspace/Model3/output/standalone/src/processing.s
+C:/CirrusDSP/bin/casm C:/CirrusDSP/clide/workspace/Model3/output/standalone/src/processing.s
+ --debug
+ -c
+ -s
+ -e
+ -D_TOOLS_VERSION_=0x0701
+ -D_SLOT_=0
+ -D_OVLY_=standalone
+ -D_OVLY_REVISION_=020000
+ -D_VERSION_=00
+ -D_DSP_=a
+ -D_COMMON_INC_PATH_=C:/CirrusDSP/crystal32/common/inc/
+ -D_TARGET_FAMILY_=crystal32
+ -D_MUI_VERSION_=020000
+ -IC:/CirrusDSP/include/
+ -IC:/CirrusDSP/include/dsplib/
+ -IC:/CirrusDSP/clide/workspace/Model3/inc/
+ -lC:/CirrusDSP/clide/workspace/Model3/output/standalone/src/processing.lst
+ -oC:/CirrusDSP/clide/workspace/Model3/output/standalone/src/processing.O
+ -iC:/CirrusDSP/crystal32/common/inc/base.h
+ -D_LOCAL_SRC_PATH_=src/
+ -D_LOCAL_INC_PATH_=inc/
+ -D_ROUTER_INC_PATH_=rom_inc/
+C:/CirrusDSP/clide/workspace/Model3/output/standalone/src/multitap_echo.s
+C:/CirrusDSP/bin/casm C:/CirrusDSP/clide/workspace/Model3/output/standalone/src/multitap_echo.s
+ --debug
+ -c
+ -s
+ -e
+ -D_TOOLS_VERSION_=0x0701
+ -D_SLOT_=0
+ -D_OVLY_=standalone
+ -D_OVLY_REVISION_=020000
+ -D_VERSION_=00
+ -D_DSP_=a
+ -D_COMMON_INC_PATH_=C:/CirrusDSP/crystal32/common/inc/
+ -D_TARGET_FAMILY_=crystal32
+ -D_MUI_VERSION_=020000
+ -IC:/CirrusDSP/include/
+ -IC:/CirrusDSP/include/dsplib/
+ -IC:/CirrusDSP/clide/workspace/Model3/inc/
+ -lC:/CirrusDSP/clide/workspace/Model3/output/standalone/src/multitap_echo.lst
+ -oC:/CirrusDSP/clide/workspace/Model3/output/standalone/src/multitap_echo.O
+ -iC:/CirrusDSP/crystal32/common/inc/base.h
+ -D_LOCAL_SRC_PATH_=src/
+ -D_LOCAL_INC_PATH_=inc/
+ -D_ROUTER_INC_PATH_=rom_inc/
+C:/CirrusDSP/clide/workspace/Model3/output/standalone/src/main.s
+C:/CirrusDSP/bin/casm C:/CirrusDSP/clide/workspace/Model3/output/standalone/src/main.s
+ --debug
+ -c
+ -s
+ -e
+ -D_TOOLS_VERSION_=0x0701
+ -D_SLOT_=0
+ -D_OVLY_=standalone
+ -D_OVLY_REVISION_=020000
+ -D_VERSION_=00
+ -D_DSP_=a
+ -D_COMMON_INC_PATH_=C:/CirrusDSP/crystal32/common/inc/
+ -D_TARGET_FAMILY_=crystal32
+ -D_MUI_VERSION_=020000
+ -IC:/CirrusDSP/include/
+ -IC:/CirrusDSP/include/dsplib/
+ -IC:/CirrusDSP/clide/workspace/Model3/inc/
+ -lC:/CirrusDSP/clide/workspace/Model3/output/standalone/src/main.lst
+ -oC:/CirrusDSP/clide/workspace/Model3/output/standalone/src/main.O
+ -iC:/CirrusDSP/crystal32/common/inc/base.h
+ -D_LOCAL_SRC_PATH_=src/
+ -D_LOCAL_INC_PATH_=inc/
+ -D_ROUTER_INC_PATH_=rom_inc/
+Linking files...
+C:/CirrusDSP/bin/clink
+ -oC:/CirrusDSP/clide/workspace/Model3/output/standalone/Model3.img
+ -fC:/CirrusDSP/crystal32/memory_maps/v00.mem.xml
+ --output_type=RAM
+ --overlay_type=standalone
+ -lC:/CirrusDSP/lib/
+ -lC:/CirrusDSP/lib/dsplib
+ -lC:/CirrusDSP/lib/dsplib/crystal32/
+C:/CirrusDSP/clide/workspace/Model3/output/standalone/src/main.O
+C:/CirrusDSP/clide/workspace/Model3/output/standalone/src/multitap_echo.O
+C:/CirrusDSP/clide/workspace/Model3/output/standalone/src/processing.O
+     [exec] Warning #507: Unknown class: Y_OS_CC_GLOBALS
+     [exec]             for the segment: CC_HEAPSTEAL_VALUES
+     [exec]             from the module: C:\CirrusDSP\lib\dsplib\crystal32\cl_heapsteal.O
+     [exec] 
+     [exec] List of linked library's modules:
+     [exec] C:\CirrusDSP\lib\crt0.o
+     [exec] C:\CirrusDSP\lib\div.o
+     [exec] C:\CirrusDSP\lib\exit.o
+     [exec] C:\CirrusDSP\lib\memset_x.o
+     [exec] C:\CirrusDSP\lib\mod.o
+     [exec] C:\CirrusDSP\lib\simulator_stack.o
+     [exec] C:\CirrusDSP\lib\strcpy_x2x.o
+     [exec] C:\CirrusDSP\lib\udiv.o
+     [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavread_bits_per_sample.o
+     [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavread_close.o
+     [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavread_frame_rate.o
+     [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavread_getnchannels.o
+     [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavread_number_of_frames.o
+     [exec] C:\CirrusDSP\lib\dsplib\crystal32\
+     [exec] cl_wavread_open.o
+     [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavread_recvsample.o
+     [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavwrite_close.o
+     [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavwrite_open.o
+     [exec] C:\CirrusDSP\lib\dsplib\crystal32\cl_wavwrite_sendsample.o
+     [exec] C:\CirrusDSP\lib\dsplib\crystal32\printf.o
+Creating .uld file...
+C:/CirrusDSP/bin/lnkuld
+ -ja
+ C:/CirrusDSP/clide/workspace/Model3/output/standalone/Model3.img
+ C:/CirrusDSP/clide/workspace/Model3/output/standalone/Model3.uld
+     [exec] 
+     [exec] Reading file: C:/CirrusDSP/clide/workspace/Model3/output/standalone/Model3.img ...
+     [exec] 	Processed 1093 line(s).
+     [exec] 
+     [exec] Writing output to file: C:/CirrusDSP/clide/workspace/Model3/output/standalone/Model3.uld ...
+     [exec] 
+     [exec] Done!
+     [exec] 
+     [exec] Writing output to file: C:/CirrusDSP/clide/workspace/Model3/output/standalone/Model3.uldb ...
+     [exec] 
+     [exec] Done!
+     [exec] 
+     [exec] Writing output to file: C:/CirrusDSP/clide/workspace/Model3/output/standalone/Model3.uldc ...
+
+BUILD SUCCESSFUL
+Total time: 11 seconds

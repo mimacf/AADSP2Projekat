@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<settings built="true" last_build_time="1637492867505">
+	<dependencies>
+		<source_file last_build_time="1637492866000" path="src/main.c">
+			<dependency>../../../../include/stdio.h</dependency>
+			<dependency>../../../../include/dsplib/wavefile.h</dependency>
+			<dependency>../../../../include/stdfix.h</dependency>
+			<dependency>../../../../include/scaling_coeff.h</dependency>
+			<dependency>../../../../include/string.h</dependency>
+			<dependency>./processing.h</dependency>
+			<dependency>./common.h</dependency>
+			<dependency>./stdfix_emu.h</dependency>
+			<dependency>./multitap_echo.h</dependency>
+		</source_file>
+		<source_file last_build_time="1637492865515" path="src/multitap_echo.c">
+			<dependency>./multitap_echo.h</dependency>
+			<dependency>./common.h</dependency>
+			<dependency>./stdfix_emu.h</dependency>
+			<dependency>../../../../include/stdfix.h</dependency>
+			<dependency>../../../../include/scaling_coeff.h</dependency>
+		</source_file>
+		<source_file last_build_time="1637492865043" path="src/processing.c">
+			<dependency>./processing.h</dependency>
+			<dependency>./common.h</dependency>
+			<dependency>./stdfix_emu.h</dependency>
+			<dependency>../../../../include/stdfix.h</dependency>
+			<dependency>../../../../include/scaling_coeff.h</dependency>
+			<dependency>./multitap_echo.h</dependency>
+			<dependency>../../../../include/math.h</dependency>
+		</source_file>
+	</dependencies>
+</settings>
